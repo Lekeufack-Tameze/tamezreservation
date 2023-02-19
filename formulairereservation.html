@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="formule.css">
+</head>
+<body>
+    <form name="formule">
+    <table border="0">
+        <tr><td> <center><h1> ENREGISTREMENT</h1></center></td></tr>
+        <tr><td><input type="text"name="noms" placeholder="Noms" required></td></tr>
+        <tr><td><input type="text"name="prenoms"  placeholder="Prenom" required></td></tr>
+        <tr><td><input type="number"name="Téléphone"  placeholder="Téléphone" required></td></tr>
+        <tr><td><input type="email"name="email"  placeholder="adresse-email" required></td></tr>
+        <tr><td><input type="text"name="CNI"  placeholder="numéro CNI" required></td></tr>
+        <tr><td><input type="date"name="date"  placeholder="" required min="2023-02-16"></td></tr>
+        <tr><td> 
+           ville de depart <select name="vild" id="">
+                <option value="">Douala</option>
+                <option value="">Yaoundé</option>
+                <option value="">Bafoussam</option>
+            </select>
+        </td></tr>
+        <tr><td> 
+            heure de depart <select name="heured" id="">
+                 <option value="">5h30</option>
+                 <option value="">6h</option>
+                 <option value="">7h</option>
+                 <option value="">8h</option>
+                 <option value="">18h</option>
+                 <option value="">20h</option>
+                 <option value="">22h</option>
+             </select>
+         </td></tr>
+        <tr><td>
+            ville d'arrivée<select name="vila" >
+                <option value="">Douala</option>
+                <option value="">Yaoundé</option>
+                <option value="">Bafoussam</option>
+            </select>
+        </td></tr>
+        <tr><td>
+        <center><input type="button" value="suivant" onclick="suivant();"/> </center>
+        </td></tr> 
+    </table>
+</form>
+    <script> 
+    function suivant() {
+        var noms=document.formule.noms.value;
+        var prenoms=document.formule.prenoms.value;
+        var Téléphone=document.formule.Téléphone.value;
+        var email=document.formule.email.value;
+        var vild=document.formule.vild.value;
+        var heured=document.formule.heured.value;
+        var vila=document.formule.vila.value;
+        var CNI=document.formule.CNI.value;
+        if(noms==''||prenoms==''||Téléphone==''||email=='' ||CNI==''){
+            alert("ereur d'enregistrement");
+        }
+        else{
+            alert("enregistrement effectué avec succes");
+        }
+        if(vild==vila){
+            alert ("erreur de destination");
+
+        }
+       
+     }
+    </script>
+</body>
+</html>

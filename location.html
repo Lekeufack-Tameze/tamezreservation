@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+    <form name="formule">
+    <table border="0">
+        <tr><td> <center><h1> LOCATION</h1></center></td></tr>
+        <tr><td><input type="text"name="noms" placeholder="Noms" required></td></tr>
+        <tr><td><input type="text"name="prenoms"  placeholder="Prenom" required></td></tr>
+        <tr><td><input type="number"name="Téléphone"  placeholder="Téléphone" required></td></tr>
+        <tr><td><input type="email"name="email"  placeholder="adresse-email" required></td></tr>
+        <tr><td><input type="text"name="CNI"  placeholder="numéro CNI" required></td></tr>
+        <tr><td><input type="text"name="Villededépart"  placeholder="Ville de départ" required></td></tr>
+        <tr><td><input type="text"name="Villedarrivée"  placeholder="Ville d'arrivée" required></td></tr>
+        <tr><td><input type="date"name="date"  placeholder="" required min="2023-02-16"></td></tr>
+    </td></tr>
+    <tr><td> 
+        type de bus <select name="bus" id="">
+             <option value="">BUS(70places)</option>
+             <option value="">coaster (35places)</option>
+             <option value="">Minibus (16places)</option>
+         </select>
+         <tr><td><input type="number"name="entrerlenombredevoiture"  placeholder="entrer le nombre " required></td></tr>
+     </td></tr>
+    <tr><td>
+        <tr><td> 
+          <!-- ville de depart <select name="vild" id="">
+                <option value="">Douala</option>
+                <option value="">Yaoundé</option>
+                <option value="">Bafoussam</option>
+            </select> --> 
+        </td></tr>
+        <!-- <tr><td> 
+            heure de depart <select name="heured" id="">
+                 <option value="">5h30</option>
+                 <option value="">6h</option>
+                 <option value="">7h</option>
+                 <option value="">8h</option>
+                 <option value="">18h</option>
+                 <option value="">20h</option>
+                 <option value="">22h</option>
+             </select>
+         </td></tr> --> 
+       <!-- <tr><td>
+            ville d'arrivée<select name="vila" >
+                <option value="">Douala</option>
+                <option value="">Yaoundé</option>
+                <option value="">Bafoussam</option>
+            </select>
+        </td></tr> --> 
+        <tr><td> 
+            <center><input type="button" value="suivant" onclick="suivant();"/> </center>
+        </td></tr> 
+    </table>
+</form>
+    <script> 
+    function suivant(){
+        var noms=document.formule.noms.value;
+        var prenoms=document.formule.prenoms.value;
+        var Téléphone=document.formule.Téléphone.value;
+        var email=document.formule.email.value;
+        var Villeda=document.formule.Villededépart.value;
+        var heured=document.formule.heured.value;
+        var Villed=document.formule.Villedarrivée.value;
+        var CNI=document.formule.CNI.value;
+        var bus=document.formule.bus.value;
+        var nb=document.formule.entrerlenombredevoiture.value;
+        if(noms==''||prenoms==''||Téléphone==''||email==''||CNI==''||nb==''||Villed==''||Villeda==''||bus==''){
+            alert("ereur d'enregistrement");
+
+        }
+        else{
+            alert("enregistrement effectué avec succes");
+        }       
+     }
+    </script>
+</body>
+</html>
