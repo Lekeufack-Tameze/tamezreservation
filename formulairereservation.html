@@ -19,27 +19,27 @@
         <tr><td><input type="date"name="date"  placeholder="" required min="2023-02-16"></td></tr>
         <tr><td> 
            ville de depart <select name="vild" id="">
-                <option value="">Douala</option>
-                <option value="">Yaoundé</option>
-                <option value="">Bafoussam</option>
+                <option value="Douala">Douala</option>
+                <option value="Yaoundé">Yaoundé</option>
+                <option value="Bafoussam">Bafoussam</option>
             </select>
         </td></tr>
         <tr><td> 
             heure de depart <select name="heured" id="">
-                 <option value="">5h30</option>
-                 <option value="">6h</option>
-                 <option value="">7h</option>
-                 <option value="">8h</option>
-                 <option value="">18h</option>
-                 <option value="">20h</option>
-                 <option value="">22h</option>
+                 <option value="5h30">5h30</option>
+                 <option value="6h">6h</option>
+                 <option value="7h">7h</option>
+                 <option value="8h">8h</option>
+                 <option value="18h">18h</option>
+                 <option value="20h">20h</option>
+                 <option value="22h">22h</option>
              </select>
          </td></tr>
         <tr><td>
             ville d'arrivée<select name="vila" >
-                <option value="">Douala</option>
-                <option value="">Yaoundé</option>
-                <option value="">Bafoussam</option>
+                <option value="Douala">Douala</option>
+                <option value="Yaoundé">Yaoundé</option>
+                <option value="Bafoussam">Bafoussam</option>
             </select>
         </td></tr>
         <tr><td>
@@ -57,18 +57,17 @@
         var heured=document.formule.heured.value;
         var vila=document.formule.vila.value;
         var CNI=document.formule.CNI.value;
+        if(vild==vila){
+           
+           alert ("erreur de destination");
+        } else{
         if(noms==''||prenoms==''||Téléphone==''||email=='' ||CNI==''){
             alert("ereur d'enregistrement");
         }
         else{
             alert("enregistrement effectué avec succes");
         }
-        if(vild=vila){
-            alert ("erreur de destination");
-
-        }else{
-            return false;
-        }
+    }
        
      }
     </script>
